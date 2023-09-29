@@ -25,11 +25,26 @@ const getWorkout = async (req, res) => {
 
 //create a new workout
 const createWorkout = async (req, res) => {
-  const {title, weight, reps} = req.body;
+  const {day, title, weight, reps} = req.body;
+  
+  if (!title) {
+    return res.status(400).json({ error: 'Workout name is required.' });
+  }
+  
+  if (!day) {
+    return res.status(400).json({ error: 'Day is required.' });
+  }
 
+  if (!weight) {
+    return res.status(400).json({ error: 'Weight is required.' });
+  }
+
+  if (!reps) {
+    return res.status(400).json({ error: 'Reps are required.' });
+  }
 //add doc to db
   try {
-    const workout = await Workout.create({title, weight, reps});
+    const workout = await Workout.create({day, title, weight, reps});
     res.status(200).json(workout);
   } catch(error) {
     res.status(400).json({error: error.message});

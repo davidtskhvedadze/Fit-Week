@@ -1,15 +1,16 @@
 import { useState } from "react";
 
 const WorkoutsForm = ({ setWorkouts }) => {
-  const [title, setTitle] = useState('')
-  const [weight, setWeight] = useState('')
-  const [reps, setReps] = useState('')
-  const [error, setError] = useState(null)
+  const [day, setDay] = useState('');
+  const [title, setTitle] = useState('');
+  const [weight, setWeight] = useState('');
+  const [reps, setReps] = useState('');
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const workout = {title, weight, reps};
+    const workout = {day, title, weight, reps};
 
     const response = await fetch('/api/workouts', {
       method: 'POST',
@@ -25,6 +26,7 @@ const WorkoutsForm = ({ setWorkouts }) => {
      }
 
      if(response.ok) {
+        setDay('');
         setTitle('');
         setWeight('');
         setReps('');
@@ -37,12 +39,17 @@ const WorkoutsForm = ({ setWorkouts }) => {
 
   return (
     <form className="create" onSubmit={handleSubmit}>
-
-      <label>Name:</label>
+    <label>Workout Name:</label>
       <input 
       type="text"
       onChange={(e) => setTitle(e.target.value)} 
       value={title}
+      />
+     <label>Day:</label>
+      <input 
+      type="text"
+      onChange={(e) => setDay(e.target.value)} 
+      value={day}
       />
     <label>Weight (lbs):</label>
       <input 
@@ -59,6 +66,7 @@ const WorkoutsForm = ({ setWorkouts }) => {
       />
         <div class="form-button-container">
           <button>Add Workout</button>
+          {error && <p className="error">{error}</p>}
         </div>
    
     </form>

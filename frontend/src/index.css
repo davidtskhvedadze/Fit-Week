@@ -118,3 +118,11 @@ form button {
   display: inline-block; 
   margin-top: 10px; 
 }
+
+.error {
+  color: red;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.2); /* Transparent reddish background */
+}

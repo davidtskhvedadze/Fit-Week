@@ -1,5 +1,3 @@
-import {useState} from 'react';
-
 const WorkoutDetails = ({ workouts, workout, setWorkouts }) => {
  
   const handleClick = async () => {
@@ -16,6 +14,7 @@ const WorkoutDetails = ({ workouts, workout, setWorkouts }) => {
   return (
     <div className="workout-details">
         <h4>{workout.title}</h4>
+        <p><strong>Day: </strong>{workout.day}</p>
         <p><strong>Weight (lbs): </strong>{workout.weight}</p>
         <p><strong>Reps: </strong>{workout.reps}</p>
         <button onClick={handleClick}>X</button>
