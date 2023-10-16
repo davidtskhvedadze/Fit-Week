@@ -26,7 +26,7 @@ module.exports = {
   devServer: {
     port: 9000,
     proxy: {
-        '/api/**': { target: 'http://localhost:3001', secure: false}
+        '/api/**': { target: 'http://localhost:4000', secure: false}
     }
   },
   plugins: [
