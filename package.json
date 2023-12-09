@@ -6,7 +6,8 @@
   "scripts": {
     "start": "concurrently \"npm run start:server\" \"npm run start:frontend\"",
     "start:server": "node server/server.js",
-    "start:frontend": "webpack-dev-server --mode development"
+    "start:frontend": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
