@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "concurrently \"npm run start:server\" \"npm run start:frontend\"",
+    "start:server": "node server/server.js",
+    "start:frontend": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "",
@@ -24,5 +26,8 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
