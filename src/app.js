@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Home from './pages/Home';
 import Navbar from "./components/Navbar";
+import LoginPage from "./components/LoginPage";
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
             <Route 
               path="/"
               element={<Home />}
+            />
+            <Route 
+              path="/login"
+              element={<LoginPage />} // Add LoginPage route
             />
           </Routes>
         </div>
