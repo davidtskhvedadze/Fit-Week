@@ -13,9 +13,7 @@ const Navbar = () => {
   return (
     <header>
         <div className="container">
-          <Link to="/">
             <h1>Fit-Week</h1>
-          </Link>
           <button onClick={signOut}>Sign Out</button>
         </div>
     </header>

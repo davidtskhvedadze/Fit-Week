@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
@@ -25,6 +25,7 @@ module.exports = {
   },
   devServer: {
     port: 9000,
+    historyApiFallback: true,
     proxy: {
         '/api/**': { target: 'http://localhost:4000', secure: false}
     }
