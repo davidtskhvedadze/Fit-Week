@@ -18,6 +18,10 @@ const workoutSchema = new Schema({
   weight: {
     type: Number,
     required: true
+  },
+  userID: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }
 }, {timestamps: true});
 
