@@ -1,7 +1,8 @@
 const express = require('express');
+const authenticateUser = require('../controllers/authmiddleware');
 const {
   getWorkouts,
-  getWorkout,
+  // getWorkout,
   createWorkout,
   deleteWorkout,
   updateWorkout
@@ -11,13 +12,13 @@ const router = express.Router();
 
 
 //GET all workouts
-router.get('/', getWorkouts);
+router.get('/', authenticateUser, getWorkouts);
 
 //GET a single workout
-router.get('/:id', getWorkout);
+// router.get('/:id', getWorkout);
 
 //POST a new workout
-router.post('/', createWorkout);
+router.post('/', authenticateUser, createWorkout);
 
 //DELETE a workout
 router.delete('/:id', deleteWorkout);
