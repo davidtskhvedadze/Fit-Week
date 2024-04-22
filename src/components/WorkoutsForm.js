@@ -12,13 +12,17 @@ const WorkoutsForm = ({ setWorkouts }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    
     const workout = {day, title, weight, reps};
+    const token = localStorage.getItem('token');
+
 
     const response = await fetch('/api/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {
-        'Content-Type': 'application/json' 
+        'Content-Type': 'application/json', 
+        'Authorization': `Bearer ${token}`
       }
     })
      const json = await response.json();
@@ -66,7 +70,7 @@ const WorkoutsForm = ({ setWorkouts }) => {
       onChange={(e) => setReps(e.target.value)} 
       value={reps}
       />
-        <div class="form-button-container">
+        <div className="form-button-container">
           <button>Add Workout</button>
           {error && <p className="error">{error}</p>}
         </div>
