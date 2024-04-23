@@ -1,4 +1,4 @@
-                                        # Fit-Week
+#                                             Fit-Week
 
 Fit-Week is a fitness tracking application that allows users to track their weekly fitness exercises.
 
