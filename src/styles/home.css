@@ -1,0 +1,28 @@
+.slide-in-from-left {
+    animation: slideInFromLeft 1s ease-in-out;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in-from-top {
+    animation: slideInFromTop 1s ease-in-out;
+    animation-fill-mode: forwards; 
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }

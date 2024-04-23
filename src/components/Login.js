@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import '../styles/user.css';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
@@ -24,14 +25,16 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className='login-container'>
+      <h4>Login</h4>
       <form onSubmit={handleSubmit}>
         <input type="email" name="email" placeholder="Email" value={credentials.email} onChange={handleChange} />
         <input type="password" name="password" placeholder="Password" value={credentials.password} onChange={handleChange} />
-        {error && <div style={{ color: 'red' }}>{error}</div>}
-        <button type="submit">Login</button>
-        <button type="button" onClick={() => navigate('/signup')}>New User? Sign Up Here</button>
+        {error && <div className="login-error" style={{ color: 'red' }}>{error}</div>}
+        <div className='user-buttons'>
+          <button className="login-button" type="submit">Login</button>
+          <button className='new-user'type="button" onClick={() => navigate('/signup')}>New User? Sign Up Here</button>
+        </div>
       </form>
     </div>
   );
