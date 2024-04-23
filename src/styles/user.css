@@ -3,6 +3,7 @@
 :root {
   --primary: blue;
   --error: #e7195a;
+  --edit: orange;
 }
 
 .login-container {
