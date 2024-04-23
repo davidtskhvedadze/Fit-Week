@@ -2,6 +2,9 @@
 
 Fit-Week is a fitness tracking application that allows users to track their weekly fitness exercises.
 
+## Screenshots
+![Screenshot](/src/assets/Fit-WeekScreenShot.png)
+
 ## Tech Stack
 [![My Skills](https://skillicons.dev/icons?i=js,react,html,css,nodejs,mongodb,express,webpack)](https://skillicons.dev)
 
