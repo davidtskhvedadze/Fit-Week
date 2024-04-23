@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@600&display=swap');
 
-:root {
-  --primary: blue;
-  --error: #e7195a;
-}
-
-
 body {
     background: #f1f1f1;
     margin: 0;
@@ -84,6 +78,8 @@ header h1 {
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .workout-details h4 {
   margin: 0 0 10px 0;
@@ -98,9 +94,8 @@ header h1 {
   text-align: center;
 }
 .workout-details button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px !important;
+  right: 20px !important;  
   font-weight: bold;
   cursor: pointer;
   background: red;
@@ -108,6 +103,17 @@ header h1 {
   border-radius: 4px;
   color: #fff;
 }
+
+.workout-detail-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 
 
 /* new workout form */
@@ -147,4 +153,36 @@ form button {
   border-radius: 4px;
   border: 1px solid red;
   background-color: rgba(255, 0, 0, 0.2); 
+}
+
+.edit-button {
+  background: var(--primary) !important;
+  color: #fff;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.workout-details label, .workout-details input {
+  text-align: center;
+}
+
+.edit-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.edit-details button{
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Gabarito";
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block; 
+  margin-top: 10px; 
 }
