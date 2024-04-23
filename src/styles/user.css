@@ -14,7 +14,7 @@
 }
 
 .login-container h4 {
-    color: var(--primary);
+    color: black;
     font-size: clamp(1rem, 3vw, 2rem);
     margin-top: auto;
 
