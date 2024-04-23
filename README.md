@@ -15,7 +15,7 @@ Fit-Week is a fitness tracking application that allows users to track their week
 1. Clone the repository: git clone https://github.com/yourusername/fit-week.git
 2. Install the dependencies: cd fit-week npm install
 3. Start the server: npm start
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. Open [http://localhost:3000](http://localhost:9000) to view it in the browser.
 
 ## Contributing
 
