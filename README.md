@@ -8,7 +8,7 @@ Fit-Week is a fitness tracking application that allows users to track their week
 ## Features
 
 - User authentication (sign in, sign out) with JSON Web Tokens
-- Weekly fitness goal tracking
+- Weekly fitness workout tracking
 
 ## Installation
 
