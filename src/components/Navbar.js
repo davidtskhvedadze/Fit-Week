@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import '../styles/index.css';
+import '../styles/home.css';
+import logo from '../assets/armlogoblue.png';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  
 
   const signOut = () => {
     localStorage.removeItem('token');
-    localStorage.removeItem('userId');
     navigate('/login');
+  }
+
+  const isAuthenticated = () => {
+    const token = localStorage.getItem('token');
+    return !!token;
   }
 
   return (
     <header>
-        <div className="container">
-            <h1>Fit-Week</h1>
-          <button onClick={signOut}>Sign Out</button>
-        </div>
+      <img src={logo} alt="logo" onClick={signOut}/>
+      <h1>Fit-Week</h1>
+      {isAuthenticated() && <button className='slide-in-from-top' onClick={signOut}>Sign Out</button>}
     </header>
   )
 };

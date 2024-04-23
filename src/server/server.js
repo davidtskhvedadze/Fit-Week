@@ -24,6 +24,7 @@ app.use('/api/workouts', workoutRoutes);
 app.use('/api/auth', authRoutes);
 
 // Serve static files
+app.use(express.static(path.resolve(__dirname, '../src/assets')));
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
 // Serve index.html for all routes not handled by the server

@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import '../styles/home.css';
 
 //components
 import WorkoutDetails from '../components/WorkoutDetails';
@@ -29,8 +30,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home">
-      <WorkoutsForm setWorkouts={setWorkouts}/>
+    <div className="home slide-in-from-left">
+      <WorkoutsForm  setWorkouts={setWorkouts}/>
         <div className="workouts">
           {workouts && workouts.map((workout) => (
              <WorkoutDetails 
