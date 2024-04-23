@@ -14,14 +14,13 @@ body {
 
 header {
   background: #fff;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 100px;
   padding: 20px;
 }
-
-
 
 header button {
   background: none;
@@ -31,14 +30,18 @@ header button {
   font-size: 30px;
   font-family: "Gabarito";
   cursor: pointer;
-
+  position: absolute; /* Position the button absolutely within the header */
+  top: 50%; /* Center the button vertically */
+  right: 20px; /* Add space to the right */
+  transform: translateY(-50%);
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 
 header h1 {
   margin: 0 auto;
-  font-size: 60px;
   color: var(--primary);
+  font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .pages {
